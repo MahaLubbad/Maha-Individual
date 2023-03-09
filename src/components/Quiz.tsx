@@ -1,13 +1,13 @@
+import { IonContent,IonPage,IonButton,IonCard } from '@ionic/react';
 import React ,{useState} from 'react';
-import { questions } from './Data';
+import { questions } from './Questions';
+import {data} from './Data';
+import {Snippet} from './Snippet';
 import './Quiz.css';
-import snap1 from "./Snap1.png";
 
 
 
-interface QuizProps { }
-
-const Quiz: React.FC<QuizProps> = () => {
+const Quiz: React.FC = () => {
   
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
@@ -26,38 +26,44 @@ const Quiz: React.FC<QuizProps> = () => {
     }
   };
 
-  
   return (
-     
+  <IonPage>
+    <IonContent>    
     <div className="quiz">
     {showScore ? (
       <div className="score-section">
-        You scored {score} out of {questions.length}
+     You scored {score} out of {questions.length}
       </div>
+       
     ) : (
       <>
         <div className="question-section">
           <div className="question-count">
-            <span>Question {currentQuestion + 1}</span>/{questions.length}
+            <span> Question {currentQuestion + 1}</span>/{questions.length}
           </div>
-          <div className="image">
-              
-       <img src={snap1} alt="code"/>
-          </div>
+            <IonCard >
+            <Snippet currentData ={data[currentQuestion]} />
+            </IonCard>
           <div className="question-text">{questions[currentQuestion].question}</div>
         </div>
+
         <div className="answer-section">
           {questions[currentQuestion].answers.map((answer) => (
-            <button className="btn" key={answer} onClick={() => handleAnswerButtonClick(answer)}>
+            <IonButton className='btn' expand="block" color="tertiary"
+             key={answer} onClick={() => handleAnswerButtonClick(answer)}>
               {answer}
-            </button>
+            </IonButton>
           ))}
         </div>
+      
       </>
     )}
   </div>
+
+    </IonContent>
+</IonPage>
+
 );
 }
-
 
 export default Quiz;

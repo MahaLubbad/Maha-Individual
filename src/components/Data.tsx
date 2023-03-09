@@ -1,20 +1,20 @@
-export const questions = [
-    {
-      question: "What will be logged to the console?",
-      answers: ["3", "4", " 0", "undefined"],
-      correct: "4",
-      img: "../public/assets/Snap1.png"
-    },
-    {
-      question: "What is the output of this code snippet?",
-      answers: ["[1, 2, 3]", "[4, 5]", "[1, 2, 3, 4, 5]", "undefined"],
-      correct: "[4, 5]",
-      img:"../public/assets/Snap2.png"
-    },
-    {
-      question: "What is the output of this code?",
-      answers: ["[1, 3, 5]", "[2, 4]", "[1, 2, 3, 4, 5]", "[]"],
-      correct: "[2, 4]",
-      img:"../public/assets/Snap3.png"
-    },
-  ];
+export const data = [
+`
+let myArr = [1, 2, 3 ];
+let myArr2 = myArr;
+myArr2.push(4); 
+
+console.log(myArr.length);`,
+
+`
+const numbers = [1, 2, 3, 4, 5];
+const filteredNumbers = numbers.filter(num => num >3 );
+
+console.log(filteredNumbers);`,
+
+`
+const nums = [1, 2, 3, 4, 5] 
+const evenNums = nums.filter(num => num % 2 === 0) 
+
+console.log(evenNums);`
+] 
