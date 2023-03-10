@@ -22,6 +22,7 @@ export const Snippet = (props:any) => {
  
     <SyntaxHighlighter language="javascript" style={dark} wrapLines={true}>
     {props.currentData}
+    
     </SyntaxHighlighter>
     
   );
