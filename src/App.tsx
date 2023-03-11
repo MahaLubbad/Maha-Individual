@@ -21,6 +21,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Quiz from './components/Quiz';
 
 setupIonicReact();
 
@@ -30,6 +31,9 @@ const App: React.FC = () => (
       <IonRouterOutlet>
         <Route exact path="/home">
           <Home />
+        </Route>
+        <Route exact path="/quiz">
+          <Quiz/>
         </Route>
         <Route exact path="/">
           <Redirect to="/home" />
