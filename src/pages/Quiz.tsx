@@ -1,8 +1,8 @@
 import { IonContent,IonPage,IonButton,IonCard } from '@ionic/react';
 import React ,{useState} from 'react';
-import { questions } from './Questions';
-import {data} from './Data';
-import {Snippet} from './Snippet';
+import { questions } from '../components/Questions';
+import {data} from '../components/Data';
+import {Snippet} from '../components/Snippet';
 import './Quiz.css';
 
 
@@ -26,6 +26,13 @@ const Quiz: React.FC = () => {
     }
   };
 
+  const restartGame = () => {
+    setShowScore(false);
+    setScore(0);
+    setCurrentQuestion(0);
+  }
+
+
   return (
   <IonPage>
     <IonContent>    
@@ -33,6 +40,8 @@ const Quiz: React.FC = () => {
     {showScore ? (
       <div className="score-section">
      You scored {score} out of {questions.length}
+
+     <IonButton color="tertiary"  onClick={() => restartGame()}>Restart Quiz</IonButton>
       </div>
        
     ) : (
