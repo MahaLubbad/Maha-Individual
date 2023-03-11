@@ -6,7 +6,6 @@ import {Snippet} from '../components/Snippet';
 import './Quiz.css';
 
 
-
 const Quiz: React.FC = () => {
   
   const [currentQuestion, setCurrentQuestion] = useState(0);
