@@ -1,6 +1,6 @@
 import { IonButton } from "@ionic/react";
 import { Link } from "react-router-dom";
-//import './Button.css'
+import './Button.css'
 
 const Button: React.FC = () => {
     return (
