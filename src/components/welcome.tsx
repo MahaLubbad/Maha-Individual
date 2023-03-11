@@ -5,7 +5,7 @@ import './Welcome.css';
 const Welcome: React.FC = () => {
 
     return (
-      <IonContent scrollY={false}>
+      <IonContent >
           
           <div className="image">
               <IonImg  src="../../assets/javascript-img.png" alt="code"></IonImg>
