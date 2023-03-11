@@ -1,5 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle} from '@ionic/react';
-import Quiz from '../components/Quiz';
+//import Quiz from '../components/Quiz';
+import Welcome from '../components/welcome';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -10,7 +11,7 @@ const Home: React.FC = () => {
      <IonTitle  class="ion-text-center">JavaScript Test</IonTitle>
      </IonHeader>
       <IonContent fullscreen>
-        <Quiz />
+        <Welcome/>
       </IonContent>
     </IonPage>
 
